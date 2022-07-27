@@ -1,8 +1,7 @@
 import "./App.css";
 import getNames from "./api";
 import { userName } from "./redux/usersReducer";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector, useStore } from "react-redux";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -10,11 +9,26 @@ function App() {
   const store = useSelector((state) => state.users.value);
   const dispatch = useDispatch();
   const [names, setNames] = useState([]);
-  let navigate = useNavigate();
+  const [filteredNames, setFilteredNames] = useState(names);
 
   useEffect(() => {
     getNames().then(setNames);
   }, []);
+
+  useEffect(() => {
+    setFilteredNames(names);
+  }, [names]);
+
+  useEffect(() => {
+    setFilteredNames(
+      names.filter((value) => {
+        if (store === "") return value;
+        else if (value.toLocaleLowerCase().includes(store.toLocaleLowerCase()))
+          return value;
+      })
+    );
+  }, [store]);
+
   return (
     <div className="App">
       <input
@@ -24,22 +38,15 @@ function App() {
           dispatch(userName(event.target.value));
         }}
       />
-
-      {names
-        .filter((value) => {
-          if (store === "") return value;
-          else if (
-            value.toLocaleLowerCase().includes(store.toLocaleLowerCase())
-          )
-            return value;
-        })
-        .map((element, index) => {
-          return (
-            <div className="users" key={index}>
-              {element}
-            </div>
-          );
-        })}
+      {filteredNames.length === 0
+        ? "Ooops... value not found"
+        : filteredNames.map((element, index) => {
+            return (
+              <div className="users" key={index}>
+                {element}
+              </div>
+            );
+          })}
     </div>
   );
 }
