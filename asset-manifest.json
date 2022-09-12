@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/test2/static/css/main.bfa824e1.css",
-    "main.js": "/test2/static/js/main.cab79bba.js",
+    "main.js": "/test2/static/js/main.a3a92f3c.js",
     "static/media/airfly.jpg": "/test2/static/media/airfly.a3966754aeb6f8786c17.jpg",
     "index.html": "/test2/index.html",
     "main.bfa824e1.css.map": "/test2/static/css/main.bfa824e1.css.map",
-    "main.cab79bba.js.map": "/test2/static/js/main.cab79bba.js.map"
+    "main.a3a92f3c.js.map": "/test2/static/js/main.a3a92f3c.js.map"
   },
   "entrypoints": [
     "static/css/main.bfa824e1.css",
-    "static/js/main.cab79bba.js"
+    "static/js/main.a3a92f3c.js"
   ]
 }
