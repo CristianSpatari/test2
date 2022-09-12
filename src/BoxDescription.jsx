@@ -14,7 +14,7 @@ function Box({ label }) {
           pasager nu este permis de compania aeriana.
         </div>
         <div className="idsValueBoxContentDescription">
-          - Este necesara o viză valabila pentru a intra in multe tari.
+          - Este necesara o viza valabila pentru a intra in multe tari.
           Conditiile pentru introducerea punctului intentionat trebuie
           verificate pe site-ul web al Ministerului Afacerilor Externe al tarii
           pe care urmează sa o vizitati. Acordurile internationale se aplica
