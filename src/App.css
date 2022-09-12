@@ -1,22 +1,8 @@
-.App {
-  margin-top: 80px;
+.container {
+  margin: 20px;
+  border-radius: 3px;
 }
 
-.App input {
-  width: 80vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  border: 1px solid #252525;
-}
-
-.users {
-  margin-top: 10px;
-}
-
-@media screen and (min-width: 1200px) {
-  .App input {
-    width: 45vw;
-  }
+.logo {
+  width: 100px;
 }
