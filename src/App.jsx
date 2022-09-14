@@ -134,18 +134,52 @@ function App() {
   return (
     <PDFExport ref={pdfExportComponent} paperSize="A4">
       <div className="container">
-        <img
-          className="logo"
-          onClick={handleExportWithComponent}
-          src={logo}
-          alt=""
-        />
+        <div className="header">
+          <img
+            className="logo"
+            onClick={handleExportWithComponent}
+            src={logo}
+            alt=""
+          />
+          <div className="ticket_de_zbor">TICKET DE ZBOR</div>
+          <div className="ticket_de_zbor_bulk">
+            <div className="ticket_de_info">
+              Denumirea juridica: ‘AIR HOUSE’S.R.L C/F: 1022600033429
+            </div>
+            <div className="ticket_de_info">
+              Adresa: mun. Chisinau str.Calea Iesilor 10
+            </div>
+            <div className="ticket_de_info">
+              Cont de decontare: MD41VI022512000000057MDL la BC
+              'Victoriabank'S.A., suc.20 Chișinău
+            </div>
+            <div className="ticket_de_info">Cod: VICBMD2X463</div>
+          </div>
+        </div>
+
         <Box array={passangerArray} label={"Pasager / Passanger"} />
-        <Box array={departureArray} label={"Informatii zbor / Flight details"} />
+        <Box
+          array={departureArray}
+          label={"Informatii zbor tur/ Flight details departure"}
+        />
+        <Box
+          array={departureArray}
+          label={"Informatii zbor retur/ Flight details return"}
+        />
         <Box array={stopsArray} label={"Escala / Stops"} />
-        <Box array={payInfoArray} label={"Informatii de plata / Payment information"} />
-        <Box array={contactInfoArray} label={"Informatii de contact / Contact information"} />
-        <BoxDescription label={"Regulile de utilizare ale biletului / Rules of use of the ticket"} />
+        <Box
+          array={payInfoArray}
+          label={"Informatii de plata / Payment information"}
+        />
+        <Box
+          array={contactInfoArray}
+          label={"Informatii de contact / Contact information"}
+        />
+        <BoxDescription
+          label={
+            "Regulile de utilizare ale biletului / Rules of use of the ticket"
+          }
+        />
       </div>
     </PDFExport>
   );

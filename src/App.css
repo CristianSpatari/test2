@@ -6,3 +6,16 @@
 .logo {
   width: 100px;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ticket_de_zbor {
+  color: #5a6268;
+}
+.ticket_de_info {
+  max-width: 200px;
+  font-size: 7px;
+}
